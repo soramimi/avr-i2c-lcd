@@ -5,8 +5,6 @@ INCLUDEPATH += /usr/avr/include/
 DEFINES += __AVR_ATmega32U2__
 
 HEADERS += \
-    avrgpio.h \
-    lcd.h
+	isplcd.h
 SOURCES += \
-    main.cpp \
-    lcd.cpp
+	main.cpp

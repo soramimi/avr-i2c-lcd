@@ -3,14 +3,14 @@ AVRISP = /dev/ttyUSB0
 TARGET = main
 
 OBJ = \
-	lcd.o \
 	main.o
 
 MCU = atmega32u2
 F_CPU = 16000000
 
 
-CFLAGS = -Os -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Wall -Wextra -Werror=return-type
+CFLAGS = -Os -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Wall -Wextra -Werror=return-type -Wno-array-bounds
+
 CC = avr-gcc $(CFLAGS)
 CXX = avr-g++ $(CFLAGS) -std=c++11
 LDFLAGS = -Os
